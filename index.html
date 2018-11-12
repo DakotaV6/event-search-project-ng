@@ -1,0 +1,30 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang= "en" ng-app="App">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+</head>
+<body>
+
+    <!-- here are our routes. These will be linked upon ng-click, but we wanted to show you our components -->
+    <a href="#!/home">home</a>
+    <a href="#!/search">search</a>
+    <a href="#!/event-list">event-list</a>
+    <a href="#!/favorites">favorites</a>
+
+    <ng-view></ng-view>
+
+    <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+    <script src="module/module.js"></script>
+    <script src="components/results/event-list.js"></script>
+    <script src="components/home.js"></script>
+    <script src="components/search-criteria.js"></script>
+    <script src="service.js"></script>
+   
+
+ </body></html>
