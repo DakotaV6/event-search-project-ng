@@ -1,0 +1,17 @@
+@media only screen and (max-width:480px){
+    
+    .search-container{
+        display:flex;
+        flex-direction:column;
+
+    }
+
+    .top-nav{
+        height: 200px;
+        width: 100%;
+        background-color: #4C5F6B;
+    }   
+    input{
+        width:100%;
+    }
+}
