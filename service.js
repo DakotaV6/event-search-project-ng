@@ -7,28 +7,30 @@ function Service($location, $http){
     self.loadSearchSection = () =>{
         $location.path("/search");
     }
-    self.loadEventList = () => {
-        $location.path("/event-list");
-    }
     self.loadFavs = () => {
         $location.path("/favorites");
     }
-
-    self.searchTM = (keyword, zipCode, startDate, endDate) => {
+    self.searchTM = (searchPara) => {
         return $http ({
             method: "GET",
-            url: `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&zipcode=${zipCode}&countryCode=US&startDateTime=${startDate}&endDateTime=${endDate}&apikey=ar4LYjeBXX8Yk3PTj7FmCaAZmtQPqMpZ`
+            url: `https://app.ticketmaster.com/discovery/v2/events.json?apikey=ar4LYjeBXX8Yk3PTj7FmCaAZmtQPqMpZ&keyword=${searchPara.keyword}&postalCode=${searchPara.zipCode}&startDateTime=${searchPara.startDate}Z&endDateTime=${searchPara.endDate}Z&countryCode=US`
         }).then((data) => {
             self.jsonPayload = data;
+            $location.path("/event-list");
             return self.jsonPayload;
         });
     };
     
     self.getJSON = () => {
-        return jsonPayload;
+        return self.jsonPayload;
     }
 }
 
 angular
     .module("App")
     .service("Service", Service)
+
+
+    // `https://app.ticketmaster.com/discovery/v2/events.json?keyword=coldplay&zipcode=48439&countryCode=US&apikey=ar4LYjeBXX8Yk3PTj7FmCaAZmtQPqMpZ`
+
+    // &startDateTime=${searchPara.startDate}&endDateTime=${searchPara.endDate}

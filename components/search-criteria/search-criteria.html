@@ -1,13 +1,13 @@
 <section class="search-container">
-    <section class = "top-nav">
+    <section class="top-nav">
     </section>
-<form action="" class="searchForm" ng-submit="$ctrl.eventSearch($ctrl.keyword, $ctrl.zipcode, $ctrl.startDate, $ctrl.endDate); $ctrl.loadEvents();">
-    <input type="text" ng-model="$ctrl.keyword" placeholder="keyword"><i class="fas fa-search"></i>
-    <input type="text" ng-model="$ctrl.zipCode" placeholder="zipcode"><i class="fas fa-search"></i>
-    <input type="text" ng-model="$ctrl.startDate" placeholder="start date"><i class="fas fa-search"></i>
-    <input type="text" ng-model="$ctrl.endDate" placeholder="end date"><i class="fas fa-search"></i>
-    <button>Search</button>
-</form>
+    <form ng-submit="$ctrl.eventSearch($ctrl.searchPara);">
+        <input type="text" ng-model="$ctrl.searchPara.keyword" placeholder="keyword"><i class="fas fa-search"></i>
+        <input type="text" ng-model="$ctrl.searchPara.zipCode" placeholder="zipcode"><i class="fas fa-search"></i>
+        <input type="date" ng-model="$ctrl.searchPara.startDate" placeholder="yyyy-MM-dd"><i class="fas fa-search"></i>
+        <input type="date" ng-model="$ctrl.searchPara.endDate" placeholder="end date"><i class="fas fa-search"></i>
+        <button>Search</button>
+    </form>
     <i class="fas fa-heart"></i>
     <i class="fas fa-search"></i>
 </section>
