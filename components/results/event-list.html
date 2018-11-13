@@ -1,5 +1,9 @@
 <header>Results</header>
-<section>
-<p>place list item here</p>
-
-</section>
+<div ng-repeat="event in $ctrl.events">
+<p>{{ event.name }}</p>
+<p>{{ event._embedded.venues[0].address.line1 }}, {{ event._embedded.venues[0].city.name }} </p>
+<p>{{ event.dates.start.localDate }}</p>
+<p>{{ event._embedded.venues[0].name }}</p>
+<a href="{{ event.url }}">Get Tickets</a>
+<button><i class="fas fa-heart"></i></button>
+</div>
