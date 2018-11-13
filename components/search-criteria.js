@@ -1,8 +1,7 @@
 "use strict"
 const searchCriteria = {
 
-    template: `<input type="text" placeholder="search1">
-                <button>Search</button>`,
+    templateUrl: "components/search-criteria.html",
 
 
 
