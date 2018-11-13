@@ -1,0 +1,120 @@
+/********************/
+/*  General Styles  */
+/********************/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    background-color: rgba(255, 255, 242, 1);
+    color: rgba(39, 40, 56, 1);
+}
+.clearfix {
+    clear: both;
+}
+
+/********************/
+/* Bucket List Page */
+/********************/
+.bucket-page {
+    display: flex;
+    margin: 20px;
+}
+
+/* Left Column */
+.profile-img {
+    width: 30vw;
+    max-width: 200px;
+    height: 30vw;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+.about-section {
+    width: 30vw;
+}
+#about-me {
+    margin-bottom: 0;
+}
+#about-me, .profile-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+}
+.back-to-search {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    left: 10px;
+    bottom: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: rgba(162, 0, 33, 1);
+}
+.fa-step-backward {
+    font-size: 25px;
+}
+
+/* Right Column */
+.bucket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin-left: 15px;
+}
+.profile-name {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#my-events {
+    font-weight: 600;
+    font-size: 18px;
+}
+#my-events, .event-info {
+    width: 100%;
+}
+.event-container {
+    width: 100%;
+}
+.event-info {
+    position: relative;
+    background-color: rgba(76, 95, 107, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+.event-info p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.event-title {
+    font-weight: 600;
+}
+.event-date {
+    padding-left: 15px;
+}
+.delete-event {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(162, 0, 33, 1);
+}
+
+@media only screen and (min-width: 768px) {
+    .about-section {
+        width: 250px;
+    }
+    .bucket-container {
+        width: 80vw;
+    }
+}
