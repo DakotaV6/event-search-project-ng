@@ -12,7 +12,7 @@ angular
                 template: "<event-list></event-list>"
             })
             .when("/favorites", {
-                template: "<favorites></favorites>"
+                template: "<bucketlist-page></bucketlist-page>"
             })
 
     }]);
