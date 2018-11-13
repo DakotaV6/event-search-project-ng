@@ -6,6 +6,10 @@ function Service($location){
     self.loadSearchSection= () =>{
         $location.path("/search");
     }
+
+    self.loadFavs = () => {
+        $location.path("/favorites");
+    }
 }
 
 angular
