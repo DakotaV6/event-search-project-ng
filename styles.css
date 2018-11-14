@@ -29,14 +29,20 @@ body {
     align-items: center;
     justify-content: center;
     justify-content: space-around;
+    position: relative;
     height: 100vh;
     background: linear-gradient(rgba(250, 250, 250, 0.2),rgba(250, 250, 250, 0.2)), url(anthony-delanoix-15928-unsplash.jpg);
     background-size: cover;
 }
  .fav{
+    font-family: 'Permanent Marker', cursive;
     text-decoration: none;
     color: black;
     margin-right: 20px;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    font-size: 20px;
 }
 .bold{
     font-family: 'Permanent Marker', cursive;
@@ -228,9 +234,6 @@ h2{
         width: 80vw;
     }
    
-    .fav{
-        align-self: flex-end;
-    }
     form{
         flex-direction: row;
         flex-wrap: wrap;
