@@ -5,6 +5,9 @@ const eventList = {
         const vm = this;
         vm.eventData = Service.getJSON();
         vm.events = vm.eventData.data._embedded.events;
+        vm.saveFav = (event) => {
+            Service.setFav(event);
+        };
         // console.log(vm.events);
 
         // events.data._embedded.events //List of events (array of event objects)

@@ -3,7 +3,16 @@ function Service($location, $http){
 
     const self = this;
     self.jsonPayload = null;
-
+    self.bucket = [];
+    self.setFav = (fav) => {
+        self.bucket.push(fav);
+    };
+    self.getFav = () =>{
+        return self.bucket;
+    };
+    self.removeEvent = (index) => {
+        self.bucket.splice(index, 1);
+    };
     self.loadSearchSection = () =>{
         $location.path("/search");
     }
