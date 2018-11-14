@@ -2,18 +2,18 @@
     <section class="top-nav">
     </section>
     <form ng-submit="$ctrl.eventSearch($ctrl.searchPara);">
-        <label for="keyword">
-            <input type="text" ng-model="$ctrl.searchPara.keyword" placeholder="keyword"><!--<i class="fas fa-search"></i>-->
-        </label>
-        <label for="zip-code">
-            <input type="text" ng-model="$ctrl.searchPara.zipCode" placeholder="zipcode"><!--<i class="fas fa-search"></i>-->
-        </label>    
-        <label for="start-date">
-            <input type="date" ng-model="$ctrl.searchPara.startDate" placeholder="yyyy-MM-dd"><!--<i class="fas fa-search"></i>-->
-        </label>
-        <label for="end-date">
-            <input type="date" ng-model="$ctrl.searchPara.endDate" placeholder="end date"><!--<i class="fas fa-search"></i>-->
-        </label>
+        <label for="keyword"></label>
+            <input name="keyword" type="text" ng-model="$ctrl.searchPara.keyword" placeholder="keyword"><!--<i class="fas fa-search"></i>-->
+        
+        <label for="zip-code"></label> 
+            <input name="zip-code" type="text" ng-model="$ctrl.searchPara.zipCode" placeholder="zipcode"><!--<i class="fas fa-search"></i>-->
+           
+        <label for="start-date"></label>
+            <input name="start-date" type="date" ng-model="$ctrl.searchPara.startDate" placeholder="yyyy-MM-dd"><!--<i class="fas fa-search"></i>-->
+        
+        <label for="end-date"></label>
+            <input name="end-date" type="date" ng-model="$ctrl.searchPara.endDate" placeholder="end date"><!--<i class="fas fa-search"></i>-->
+       
         
         <button class="search-button">Search</button>
     </form>
