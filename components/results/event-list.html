@@ -1,4 +1,4 @@
-<header>Results</header>
+<h1 class="bold">Results</h1>
 <section class="event-container eventList-container">
     <div ng-repeat="event in $ctrl.events" class="event-info">
         <!-- <div class="event-img" style="background-image:url({{event.images[1].url}})"></div> -->
@@ -13,7 +13,7 @@
             <i ng-click="$ctrl.saveFav(event);" class="fas fa-heart"></i>
         </div>
     </div>
-    <p ng-show="$ctrl.noResultsFound();">No Results Found</p>
+    <p class="bold no-results" ng-show="$ctrl.noResultsFound();">No Results Found</p>
     <div class="bottom-fix"></div>
 </section>
 <footer>
