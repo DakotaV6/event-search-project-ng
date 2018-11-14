@@ -148,20 +148,26 @@ h2{
     font-family: 'Permanent Marker', cursive;
     font-size: 22px;
 }
-.back-to-search {
+.page-back, .page-forward {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 10px;
-    bottom: 20px;
     cursor: pointer;
-    background: none;
-    border: none;
     text-decoration: none;
     font-size: 18px;
+    background: none;
+    border: none;
     color: rgba(162, 0, 33, 1);
 }
-.fa-step-backward {
+.page-back {
+    left: 10px;
+    bottom: 20px;
+}
+.page-forward {
+    right: 10px;
+    bottom: 20px;
+}
+.fa-step-backward, .fa-step-forward {
     font-size: 25px;
 }
 
