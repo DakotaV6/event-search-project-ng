@@ -10,10 +10,13 @@
     <p class="profile-name">Newt Scamander</p> <!-- Persona name here -->
     <p id="my-events">My Events:</p>
     <section class="event-container">
-        <div class="event-info"> <!-- This will be the repeating section for each event favorite-->
-            <p class="event-title">Arctic Monkeys Event</p> <!-- Title of Event -->
-            <p class="event-date">Date & Location</p> <!-- Date and Location of Event -->
-            <i class="fas fa-ban delete-event"></i> <!-- Add delete functionality -->
+        <div ng-repeat = "fav in $ctrl.favList track by $index"class="event-info"> <!-- This will be the repeating section for each event favorite-->
+            <p class="event-title">{{ fav.name}}</p>
+            <p>{{ fav._embedded.venues[0].address.line1 }}, {{ fav._embedded.venues[0].city.name }} </p>
+            <p class="event-date">{{ fav.dates.start.localDate}}</p>
+            <p>{{ fav._embedded.venues[0].name }}</p>
+            <a href="{{ fav.url }}">Get Tickets</a>
+            <i ng-click="$ctrl.removeFav($index)" class="fas fa-ban delete-event"></i> <!-- Add delete functionality -->
         </div>
     </section>
 </section>
