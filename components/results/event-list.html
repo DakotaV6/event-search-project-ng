@@ -8,6 +8,7 @@
         <a href="{{ event.url }}">Get Tickets</a>
         <button ng-click="$ctrl.saveFav(event);"><i class="fas fa-heart"></i></button>
     </div>
+    <p ng-show="$ctrl.noResultsFound();">No Results Found</p>
 </section>
 <a class="page-back" href="#!/search"><i class="fas fa-step-backward"></i>Back To Search</a>
 <a class="page-forward" href="#!/favorites">Favorites<i class="fas fa-step-forward"></i></a>
