@@ -12,38 +12,16 @@
         <section class="event-container">
             <div ng-repeat="fav in $ctrl.favList track by $index" class="event-info">
                 <!-- This will be the repeating section for each event favorite-->
+                <img src="{{event.images[1].url}}" class="event-img">
+                <div class="clearfix"></div>
+                <div class="event-details">
                 <p class="event-title">{{ fav.name}}</p>
                 <p>{{ fav._embedded.venues[0].address.line1 }}, {{ fav._embedded.venues[0].city.name }} </p>
                 <p>{{ fav.dates.start.localDate}}</p>
-                <!--class="event-date"-->
                 <p>{{ fav._embedded.venues[0].name }}</p>
                 <a href="{{ fav.url }}">Get Tickets</a>
                 <i ng-click="$ctrl.removeFav($index)" class="fas fa-ban delete-event"></i>
-                <!-- Add delete functionality -->
-            </div>
-            <div class="event-info">
-                <p class=" event-title">BLAHHHHHH</p>
-                <p>Location, City </p>
-                <p>2222-22-22</p>
-                <p>HOLIDAY INN</p>
-                <a href="#">Get Tickets</a>
-                <button><i class="fas fa-heart"></i></button>
-            </div>
-            <div class="event-info">
-                <p class=" event-title">BLAHHHHHH</p>
-                <p>Location, City </p>
-                <p>2222-22-22</p>
-                <p>HOLIDAY INN</p>
-                <a href="#">Get Tickets</a>
-                <button><i class="fas fa-heart"></i></button>
-            </div>
-            <div class="event-info">
-                <p class=" event-title">BLAHHHHHH</p>
-                <p>Location, City </p>
-                <p>2222-22-22</p>
-                <p>HOLIDAY INN</p>
-                <a href="#">Get Tickets</a>
-                <button><i class="fas fa-heart"></i></button>
+                </div>
             </div>
 
         </section>
