@@ -12,7 +12,7 @@
         <section class="event-container">
             <div ng-repeat="fav in $ctrl.favList track by $index" class="event-info">
                 <!-- This will be the repeating section for each event favorite-->
-                <img src="{{event.images[1].url}}" class="event-img">
+                <img src="{{fav.images[1].url}}" class="event-img">
                 <div class="clearfix"></div>
                 <div class="event-details">
                 <p class="event-title">{{ fav.name}}</p>
