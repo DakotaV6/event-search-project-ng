@@ -6,6 +6,8 @@
         <p>{{ event.dates.start.localDate }}</p>
         <p>{{ event._embedded.venues[0].name }}</p>
         <a href="{{ event.url }}">Get Tickets</a>
-        <button><i class="fas fa-heart"></i></button>
+        <button ng-click="$ctrl.saveFav(event);"><i class="fas fa-heart"></i></button>
     </div>
 </section>
+<a class="page-back" href="#!/search"><i class="fas fa-step-backward"></i>Back To Search</a>
+<a class="page-forward" href="#!/favorites">Favorites<i class="fas fa-step-forward"></i></a>
