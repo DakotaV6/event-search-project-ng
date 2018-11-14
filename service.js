@@ -24,6 +24,7 @@ function Service($location, $http){
             method: "GET",
             url: `https://app.ticketmaster.com/discovery/v2/events.json?apikey=ar4LYjeBXX8Yk3PTj7FmCaAZmtQPqMpZ&keyword=${searchPara.keyword}&postalCode=${searchPara.zipCode}&startDateTime=${searchPara.startDate}Z&endDateTime=${searchPara.endDate}Z&countryCode=US`
         }).then((data) => {
+            // console.log(data);
             self.jsonPayload = data;
             $location.path("/event-list");
             return self.jsonPayload;
@@ -38,8 +39,3 @@ function Service($location, $http){
 angular
     .module("App")
     .service("Service", Service)
-
-
-    // `https://app.ticketmaster.com/discovery/v2/events.json?keyword=coldplay&zipcode=48439&countryCode=US&apikey=ar4LYjeBXX8Yk3PTj7FmCaAZmtQPqMpZ`
-
-    // &startDateTime=${searchPara.startDate}&endDateTime=${searchPara.endDate}
