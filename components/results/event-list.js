@@ -6,6 +6,11 @@ const eventList = {
 //we will two child components, bucketListPage, and the other one is event
     controller: [function(){
         const vm= this;
+
+ff
+        vm.saveFav = (fav) => {
+            Service.setFavData(fav);
+        }
     }
     ]
 }

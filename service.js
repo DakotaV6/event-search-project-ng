@@ -3,12 +3,18 @@ function Service($location){
 
     const self = this;
 
-    self.loadSearchSection= () =>{
+    self.favArray = [];
+    self.loadSearchSection = () =>{
         $location.path("/search");
     }
 
     self.loadFavs = () => {
         $location.path("/favorites");
+    }
+
+    self.setFavData = (fav) =>{
+
+        favArray.push(fav)
     }
 }
 
