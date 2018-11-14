@@ -97,13 +97,40 @@ h2{
         flex-direction: column;
         align-items: center;
         width:75%;
+        margin-top: 10%;
+        right:10px;
     }
     .search-button{
-        width:50%;
+        width: 50%;
+        padding: 12px;
+        /* box-shadow: 0 0 5px black; */
+        border-radius: 4px;
+        border: none;
+        font-family: 'Rubik', sans-serif;                 
+        background-color: black;
+        color: rgba(255, 255, 242, 1);
+        font-size:100%;
+        margin-top:20px;
+        
+        
+        
+        /* width:50%;
         height: 20px;
         margin-top: 20px;
         background-color: #272838;
         color:white;
+    } */
+}
+    .search-button:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    }
+    .search-feature{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    label{
+       width:80px;
     }
 /**********************/
 /* Event Results Page */
@@ -237,6 +264,14 @@ h2{
         justify-content: center;
     }
     input{
-        width:23%;
+        width: 80%;
+        margin: 10px;
+
     }
+    .search-feature{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    }
+    
 }
