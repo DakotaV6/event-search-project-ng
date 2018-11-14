@@ -242,6 +242,7 @@ h2{
 .event-info {
     display: flex;
     align-items: center;
+    position: relative;
     background-color: rgba(76, 95, 107, 0.5);
     border-radius: 5px;
     height: 160px;
@@ -259,7 +260,7 @@ h2{
 }
 .delete-event {
     position: absolute;
-    right: 10px;
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
