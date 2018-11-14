@@ -71,19 +71,37 @@ h2{
 
     .search-container{
         display:flex;
+
         flex-direction:column;
+        align-items:center;
         /* justify-content: center; */
         height:400px;
         /* align-items: center; */
     }
     .top-nav{
-        height: 100px;
-        width: 400px;
+        height: 50px;
+        width: 100%;
         background-color: #4C5F6B;
         opacity: 0.5;
     }   
     input{
-        width:100%;
+        width:75%;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:75%;
+    }
+    .search-button{
+        width:50%;
+        height: 20px;
+        margin-top: 20px;
+        background-color: #272838;
+        color:white;
     }
 /********************/
 /* Bucket List Page */
@@ -193,6 +211,14 @@ h2{
     }
     .review1, .review2, .review3{
         width: 25%;
+    }
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    input{
+        width:23%;
     }
 /*  Flex end anchor tag for home page  */
 }
