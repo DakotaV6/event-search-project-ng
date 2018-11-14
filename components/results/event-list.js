@@ -8,10 +8,21 @@ const eventList = {
         vm.saveFav = (event) => {
             Service.setFav(event);
         };
-        console.log(vm.events);
+       vm.noResultsFound = () => {
+            if(vm.events.length < 1){
+                return true;
+            } else {
+                return false;
+            }
+        };
+        
     }]
 }
 
 angular
     .module("App")
     .component("eventList", eventList)
+
+
+
+

@@ -2,19 +2,22 @@
     <section class="top-nav">
     </section>
     <form ng-submit="$ctrl.eventSearch($ctrl.searchPara);">
-        <label for="keyword">keyword</label>
+        <div class="search-feature">
+            <label for="keyword">keyword</label>
             <input name="keyword" type="text" ng-model="$ctrl.searchPara.keyword" placeholder="keyword"><!--<i class="fas fa-search"></i>-->
-        
-        <label for="zip-code">zipcode</label> 
+        </div>
+        <div class="search-feature">
+            <label for="zip-code">zipcode</label> 
             <input name="zip-code" type="text" ng-model="$ctrl.searchPara.zipCode" placeholder="zipcode"><!--<i class="fas fa-search"></i>-->
-           
-        <label for="start-date">start-date</label>
-            <input name="start-date" type="date" ng-model="$ctrl.searchPara.startDate"><!--<i class="fas fa-search"></i>-->
-        
-        <label for="end-date">end-date</label>
-            <input name="end-date" type="date" ng-model="$ctrl.searchPara.endDate"><!--<i class="fas fa-search"></i>-->
-       
-        
+        </div>
+        <div class="search-feature">   
+            <label for="start-date">start date</label>
+            <input name="start-date" type="date" ng-model="$ctrl.searchPara.startDate" placeholder="yyyy-MM-dd"><!--<i class="fas fa-search"></i>-->
+        </div>
+        <div class="search-feature">
+            <label for="end-date">end date</label>
+            <input name="end-date" type="date" ng-model="$ctrl.searchPara.endDate" placeholder="end date"><!--<i class="fas fa-search"></i>-->
+        </div> 
         <button class="search-button">Search</button>
     </form>
     <i class="fas fa-heart"></i>
