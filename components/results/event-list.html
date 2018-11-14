@@ -1,13 +1,40 @@
 <header>Results</header>
-<section class="event-major-container">
-    <div ng-repeat="event in $ctrl.events" class="event-card">
-        <p>{{ event.name }}</p>
+<section class="event-container eventList-container">
+    <div ng-repeat="event in $ctrl.events" class="event-info">
+        <p class="event-title">{{ event.name }}</p>
         <p>{{ event._embedded.venues[0].address.line1 }}, {{ event._embedded.venues[0].city.name }} </p>
         <p>{{ event.dates.start.localDate }}</p>
         <p>{{ event._embedded.venues[0].name }}</p>
         <a href="{{ event.url }}">Get Tickets</a>
         <button ng-click="$ctrl.saveFav(event);"><i class="fas fa-heart"></i></button>
     </div>
+    <div class="event-info">
+        <p class=" event-title">BLAHHHHHH</p>
+        <p>Location, City </p>
+        <p>2222-22-22</p>
+        <p>HOLIDAY INN</p>
+        <a href="#">Get Tickets</a>
+        <button><i class="fas fa-heart"></i></button>
+    </div>
+    <div class="event-info">
+        <p class=" event-title">BLAHHHHHH</p>
+        <p>Location, City </p>
+        <p>2222-22-22</p>
+        <p>HOLIDAY INN</p>
+        <a href="#">Get Tickets</a>
+        <button><i class="fas fa-heart"></i></button>
+    </div>
+    <div class="event-info">
+        <p class=" event-title">BLAHHHHHH</p>
+        <p>Location, City </p>
+        <p>2222-22-22</p>
+        <p>HOLIDAY INN</p>
+        <a href="#">Get Tickets</a>
+        <button><i class="fas fa-heart"></i></button>
+    </div>
+    <div class="bottom-fix"></div>
 </section>
+<footer>
 <a class="page-back" href="#!/search"><i class="fas fa-step-backward"></i>Back To Search</a>
 <a class="page-forward" href="#!/favorites">Favorites<i class="fas fa-step-forward"></i></a>
+</footer>

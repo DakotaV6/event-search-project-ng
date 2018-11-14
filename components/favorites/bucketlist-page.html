@@ -1,24 +1,57 @@
 <div class="bucket-page">
-<section class="about-section">
-    <img src="components/favorites/newt-scamander.png" alt="Newt Scamander" class="profile-img"> <!-- We can change this img -->
-    <p id="about-me">About Me:</p>
-    <p>Lover of obscure bands. Also a fan of bands such as Artic Monkeys, Arcade Fire, and Coldplay.</p>
+    <section class="about-section">
+        <img src="components/favorites/newt-scamander.png" alt="Newt Scamander" class="profile-img">
+        <!-- We can change this img -->
+        <p id="about-me">About Me:</p>
+        <p>Lover of obscure bands. Also a fan of bands such as Artic Monkeys, Arcade Fire, and Coldplay.</p>
+    </section>
+
+    <section class="bucket-container">
+        <p class="profile-name">Newt Scamander</p> <!-- Persona name here -->
+        <p id="my-events">My Events:</p>
+        <section class="event-container">
+            <div ng-repeat="fav in $ctrl.favList track by $index" class="event-info">
+                <!-- This will be the repeating section for each event favorite-->
+                <p class="event-title">{{ fav.name}}</p>
+                <p>{{ fav._embedded.venues[0].address.line1 }}, {{ fav._embedded.venues[0].city.name }} </p>
+                <p>{{ fav.dates.start.localDate}}</p>
+                <!--class="event-date"-->
+                <p>{{ fav._embedded.venues[0].name }}</p>
+                <a href="{{ fav.url }}">Get Tickets</a>
+                <i ng-click="$ctrl.removeFav($index)" class="fas fa-ban delete-event"></i>
+                <!-- Add delete functionality -->
+            </div>
+            <div class="event-info">
+                <p class=" event-title">BLAHHHHHH</p>
+                <p>Location, City </p>
+                <p>2222-22-22</p>
+                <p>HOLIDAY INN</p>
+                <a href="#">Get Tickets</a>
+                <button><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="event-info">
+                <p class=" event-title">BLAHHHHHH</p>
+                <p>Location, City </p>
+                <p>2222-22-22</p>
+                <p>HOLIDAY INN</p>
+                <a href="#">Get Tickets</a>
+                <button><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="event-info">
+                <p class=" event-title">BLAHHHHHH</p>
+                <p>Location, City </p>
+                <p>2222-22-22</p>
+                <p>HOLIDAY INN</p>
+                <a href="#">Get Tickets</a>
+                <button><i class="fas fa-heart"></i></button>
+            </div>
+
+        </section>
+        <div class="bottom-fix"></div>
+    </section>
+</div>
+
+<footer>
     <a class="page-back" href="#!/event-list"><i class="fas fa-step-backward"></i>Back To Results</a>
     <a class="page-forward" href="#!/search">New Search<i class="fas fa-step-forward"></i></a>
-</section>
-
-<section class="bucket-container">
-    <p class="profile-name">Newt Scamander</p> <!-- Persona name here -->
-    <p id="my-events">My Events:</p>
-    <section class="event-container">
-        <div ng-repeat = "fav in $ctrl.favList track by $index"class="event-info"> <!-- This will be the repeating section for each event favorite-->
-            <p class="event-title">{{ fav.name}}</p>
-            <p>{{ fav._embedded.venues[0].address.line1 }}, {{ fav._embedded.venues[0].city.name }} </p>
-            <p class="event-date">{{ fav.dates.start.localDate}}</p>
-            <p>{{ fav._embedded.venues[0].name }}</p>
-            <a href="{{ fav.url }}">Get Tickets</a>
-            <i ng-click="$ctrl.removeFav($index)" class="fas fa-ban delete-event"></i> <!-- Add delete functionality -->
-        </div>
-    </section>
-</section>
-</div>
+</footer>
