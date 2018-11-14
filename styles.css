@@ -19,6 +19,7 @@ body {
 .clearfix {
     clear: both;
 }
+
 /***************/
 /*  Home Page  */
 /***************/
@@ -32,11 +33,11 @@ body {
     background: linear-gradient(rgba(250, 250, 250, 0.2),rgba(250, 250, 250, 0.2)), url(anthony-delanoix-15928-unsplash.jpg);
     background-size: cover;
 }
-/* a{
+ .fav{
     text-decoration: none;
     color: black;
-    margin: 10px;
-} */
+    margin-right: 20px;
+}
 .bold{
     font-family: 'Permanent Marker', cursive;
 }
@@ -53,17 +54,18 @@ h2{
 .start-btn{
     width: 18%;
     padding: 12px;
-    border-radius: 5px;
     box-shadow: 0 0 5px black;
     border: none;
     font-family: 'Rubik', sans-serif;                 
-    background-color: #4C5F6E;
+    background-color: black;
+    color: rgba(255, 255, 242, 1);
     font-size:100%;
 }
 
-.reviews{
-    display: none;
+.start-btn:hover{
+    background-color: rgba(0, 0, 0, 0.6);
 }
+
 
 /***************/
 /* Search Page */
@@ -71,19 +73,37 @@ h2{
 
     .search-container{
         display:flex;
+
         flex-direction:column;
+        align-items:center;
         /* justify-content: center; */
         height:400px;
         /* align-items: center; */
     }
     .top-nav{
-        height: 100px;
-        width: 400px;
+        height: 50px;
+        width: 100%;
         background-color: #4C5F6B;
         opacity: 0.5;
     }   
     input{
-        width:100%;
+        width:75%;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:75%;
+    }
+    .search-button{
+        width:50%;
+        height: 20px;
+        margin-top: 20px;
+        background-color: #272838;
+        color:white;
     }
 /**********************/
 /* Event Results Page */
@@ -201,14 +221,16 @@ h2{
     .bucket-container {
         width: 80vw;
     }
-    .reviews{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-        height: 20%;
+   
+    .fav{
+        align-self: flex-end;
     }
-    .review1, .review2, .review3{
-        width: 25%;
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-/*  Flex end anchor tag for home page  */
+    input{
+        width:23%;
+    }
 }

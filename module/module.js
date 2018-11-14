@@ -14,5 +14,8 @@ angular
             .when("/favorites", {
                 template: "<bucketlist-page></bucketlist-page>"
             })
+            .when("/",{
+                template: "<home></home>"
+            });
 
     }]);
