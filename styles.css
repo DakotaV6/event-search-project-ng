@@ -85,6 +85,22 @@ h2{
     input{
         width:100%;
     }
+/**********************/
+/* Event Results Page */
+/**********************/
+   
+.event-major-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.event-card {
+    display: inline-block;
+    height: 50vw;
+    width: 80vw;
+    text-align: center;
+}
+
 /********************/
 /* Bucket List Page */
 /********************/
