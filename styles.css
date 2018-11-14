@@ -16,6 +16,14 @@ body {
     background-color: rgba(255, 255, 242, 1);
     color: rgba(39, 40, 56, 1);
 }
+.get-tickets {
+    color: rgba(0, 121, 140, 1);
+    font-weight: 600;
+    text-decoration: none;
+}
+.get-tickets:hover {
+    color: rgba(255, 255, 242, 1);
+}
 .clearfix {
     clear: both;
 }
@@ -179,6 +187,14 @@ label{
     transform: translate(-50%, -50%);
     font-size: 150%;
 }
+.fave-heart {
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
 
 /********************/
 /* Bucket List Page */
@@ -263,8 +279,8 @@ label{
 }
 .delete-event {
     position: absolute;
-    right: 5%;
-    top: 50%;
+    right: 2%;
+    top: 10%;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 20px;
