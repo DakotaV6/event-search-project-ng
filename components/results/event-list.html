@@ -9,8 +9,8 @@
             <p>{{ event._embedded.venues[0].address.line1 }}, {{ event._embedded.venues[0].city.name }} </p>
             <p>{{ event.dates.start.localDate }}</p>
             <p>{{ event._embedded.venues[0].name }}</p>
-            <a href="{{ event.url }}">Get Tickets</a>
-            <i ng-click="$ctrl.saveFav(event);" class="fas fa-heart"></i>
+            <a class="get-tickets" href="{{ event.url }}">Get Tickets</a>
+            <i ng-click="$ctrl.saveFav(event);" class="fas fa-heart fave-heart"></i>
         </div>
     </div>
     <p class="bold no-results" ng-show="$ctrl.noResultsFound();">No Results Found</p>

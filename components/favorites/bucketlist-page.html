@@ -19,7 +19,7 @@
                 <p>{{ fav._embedded.venues[0].address.line1 }}, {{ fav._embedded.venues[0].city.name }} </p>
                 <p>{{ fav.dates.start.localDate}}</p>
                 <p>{{ fav._embedded.venues[0].name }}</p>
-                <a href="{{ fav.url }}">Get Tickets</a>
+                <a class="get-tickets" href="{{ fav.url }}">Get Tickets</a>
                 <i ng-click="$ctrl.removeFav($index)" class="fas fa-ban delete-event"></i>
                 </div>
             </div>
